@@ -1,0 +1,234 @@
+:root {
+    --primary: #FF6B6B;
+    --primary-dark: #e05555;
+    --secondary: #6B5BFF;
+    --dark: #2E2E2E;
+    --light: #F8F8F8;
+    --gray: #777777;
+}
+
+body {
+    font-family: 'segoe UI', system-ui, sans-serif; 
+    padding: 40px;
+    color: var(--dark);
+    background-color: var(--light);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* header section */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo::after {
+    content: ".";
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    height: 2px;
+    width: 0;
+    bottom: -4px;
+    left: 0px;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+/* hero section */
+
+hr {
+    border: none;
+    border-top: 1.5px solid #E0E0E0;
+    margin: 30px 0;
+}
+
+.hero {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    max-width: 700px;    
+}
+
+.hero span {
+    color: var(--primary);
+}
+
+.hero p {
+    margin-bottom: 32px;
+    line-height: 1.6;
+    color: var(--gray);
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: inherit;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(5px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--dark);
+    border-color: var(--dark);  
+}
+
+.btn-secondary:hover {
+    background-color: var(--dark);
+    color: white;
+    transform: translateY(5px);
+}
+
+/* profile section */
+
+.profile  {
+    position: relative;
+}
+
+.delivery, .off {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.delivery {
+    bottom: 60px;
+    left: -20px;
+}
+
+.off { 
+    display: block;
+    top: 20px;
+    right: 0px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* stats section */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.stat-item {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 1px solid #F0F0F0;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--primary);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-item p {
+    color: var(--gray);
+    margin-top: 0;
+    line-height: 1.5;
+}
+
